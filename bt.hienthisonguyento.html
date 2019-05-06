@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num=Number(prompt("nhap so luong can hien thi:"))
+    function kiemTraNT(x) {
+        if (x == 2) return "nT";
+        if (x == 1 || x % 2 == 0) return  "kNT";
+        for (let i = 2; i < (x - 1); i++) {
+            if (x % i == 0) {
+                return "kNT";
+            }
+        }
+        return "nT";
+    }
+    let ketqua = "";
+    let count = 0;
+    for (let i = 1; count < num; i++) {
+        if (kiemTraNT(i) == "nT") {
+            ketqua = ketqua + " " + i + " la so nguyen to <br/>";
+            count++;
+        }
+    }
+    document.write(ketqua);
+</script>
+
+</body>
+</html>
